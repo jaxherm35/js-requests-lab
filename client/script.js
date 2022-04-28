@@ -127,9 +127,15 @@ repeatElement.textContent = response.data
 */
 
 // CODE HERE
+const askQuestion = () => {
 
-
-
+    axios.get('http://localhost:3000/?i-dont-know-what-to-ask')
+        then((response) => {
+        console.log(response.data)
+        })
+}
+        
+document.getElementById('query-button').addEventListener('click', askQuestion)
 ////////////////
 //INTERMEDIATE//
 ////////////////
